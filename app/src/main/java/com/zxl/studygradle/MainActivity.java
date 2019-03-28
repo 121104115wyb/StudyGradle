@@ -3,8 +3,7 @@ package com.zxl.studygradle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.btzh.pagelement.hybrid.HyConstants;
-import com.btzh.pagelement.hybrid.WebCommons;
+import com.zxl.library.Common;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.println("---"+HyConstants.BTZH_CALLBACK_NAV_LEFT_BACK);
+        System.out.println("---"+ Common.test);
 
     }
 }
