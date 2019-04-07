@@ -62,16 +62,29 @@ android {
 
     //签名脚本配置
     signingConfigs {
+//        create("release") {
+//            //正确填写你的jks文件目录地址
+//            storeFile file("../config/build/studygradle.jks")
+//            //签名
+//            storePassword "121104115"
+//            //别名标签
+//            keyAlias "gradle"
+//            //秘钥
+//            keyPassword "121104115"
+//            storeType "jks"
+//        }
+        //配置你的签名和密钥到本地的gradle.properties,提交代码时不提交这个文件，用来保护你的密钥安全
+        //但是，当多人同时维护这个项目时，一定要记得分享
         create("release") {
             //正确填写你的jks文件目录地址
-            storeFile file("../config/build/studygradle.jks")
+            storeFile file(KEY_PATH)
             //签名
-            storePassword "121104115"
+            storePassword KEY_PASS
             //别名标签
-            keyAlias "gradle"
+            keyAlias ALIAS_NAME
             //秘钥
-            keyPassword "121104115"
-            storeType "jks"
+            keyPassword ALIAS_PASS
+            storeType STORETYPE
         }
     }
 
